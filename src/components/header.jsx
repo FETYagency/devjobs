@@ -14,7 +14,7 @@ export default function Header() {
   const { status, content } = useSelector(selectJobs);
   let nextTheme = currentTheme === "dark" ? "light" : "dark";
   useEffect(() => {
-    if (status === "idle") toggle();
+    toggle();
   }, []);
   function handleToglleTheme(e) {
     toggle(nextTheme);
