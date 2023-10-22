@@ -9,6 +9,7 @@ export default function Card({ info }) {
       >
         <span
           className={`absolute top-[-25px] grid aspect-square w-[50px] place-items-center rounded-[15px] bg-black/50 dark:bg-white/10`}
+          style={{ background: info.logoBackground }}
         >
           <img src={info.logo} />
         </span>

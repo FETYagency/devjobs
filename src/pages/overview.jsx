@@ -30,6 +30,7 @@ export default function OverView() {
           logo={infos.logo}
           link={infos.website}
           company={infos.company}
+          logoBackground={infos.logoBackground}
         />
         <Article info={infos} />
         <a
@@ -53,10 +54,13 @@ export default function OverView() {
   );
 }
 
-function Header({ logo, link, company }) {
+function Header({ logo, logoBackground, link, company }) {
   return (
     <div className="relative flex flex-col items-center rounded-[6px] bg-[#19202D] pb-[32px] pt-[50px] md:flex-row md:items-center md:gap-[40px] md:overflow-hidden md:p-0 md:pr-[40px]">
-      <span className="absolute top-[-25px] grid h-[50px] w-[50px] place-items-center rounded-[5px] bg-white/20 md:static md:h-[140px] md:w-[140px] md:self-stretch md:rounded-none">
+      <span
+        style={{ background: logoBackground }}
+        className="absolute top-[-25px] grid h-[50px] w-[50px] place-items-center rounded-[5px] bg-white/20 md:static md:h-[140px] md:w-[140px] md:self-stretch md:rounded-none"
+      >
         <img src={logo} />
       </span>
       <div className="mb-[43px] text-center md:m-0">
